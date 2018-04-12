@@ -7,7 +7,7 @@ public class XO {
   
 	public static boolean getXO (String str) {
 		str = str.toLowerCase();
-		boolean evenSteven = false;
+		boolean evenSteven;
 		int numX = 0;
 		int numO = 0;
 		for(int i = 0; i < str.length(); i++ ){
