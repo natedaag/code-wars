@@ -5,15 +5,37 @@ import java.util.Arrays;
 public class Kata {
 
 	public static void main(String[] args) {
-		isAnagram("foeTfe", "toffeE");
-		String[] cards = {"QD", "4D", "10D", "KD", "5D"};
-//		"AD", "4S", "7H", "KS", "10S"
-//		"AS", "3S", "9S", "KS", "4S"
-//		"QD", "4D", "10D", "KD", "5D"
-//		"AS", "3S", "9S", "KS", "4S"
-		checkIfFlush(cards);
+//		isAnagram("foeTfe", "toffeE");
+//		String[] cards = {"QD", "4D", "10D", "KD", "5D"};
+//		checkIfFlush(cards);
+//		rps("rock", "paper");
+//		hexToDec("10");
+		
 	}
 	
+	
+	static int hexToDec(final String hexString) {
+		int returned = Integer.parseInt(hexString, 16);
+		System.out.println(returned);
+		return (int) returned;
+	}
+
+	private static String rps(String p1, String p2) {
+		String winner = "";
+		if (p1.equals(p2)) {
+			winner = "Draw!";
+			System.out.println(winner);
+		}  else if (p1.equals("scissors") && p2.equals("paper")
+				|| p1.equals("rock") && p2.equals("scissors")
+				|| p1.equals("paper") && p2.endsWith("rock")) {
+			winner = "Player 1 won!";
+		} else {
+			winner = "Player 2 won!";
+		}
+		System.out.println(winner);
+		return winner;
+	}
+
 	public static boolean checkIfFlush(String[] cards) {
 		boolean isFlush = false;
 		int counter = 0;
@@ -54,15 +76,3 @@ public class Kata {
 	}
 		
 }
-/*
- * b b
-u u
-c c
-k k
-e e
-e e
-t t
-h h
-a a
-d d
-*/
