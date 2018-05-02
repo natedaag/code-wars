@@ -2,12 +2,12 @@ package com.codewars;
 
 public class XO {
 	public static void main(String[] args) {
-		getXO("xxOo");
+		getXO("XXxOo");
 	}
   
 	public static boolean getXO (String str) {
 		str = str.toLowerCase();
-		boolean evenSteven;
+		boolean evenSteven = false;
 		int numX = 0;
 		int numO = 0;
 		for(int i = 0; i < str.length(); i++ ){
@@ -21,9 +21,7 @@ public class XO {
 		}
 		if(numX == numO) {
 			evenSteven = true;
-		} else {
-			evenSteven = false;
-		}
+		} 
 		System.out.println(evenSteven);
 		return evenSteven;
 	}
