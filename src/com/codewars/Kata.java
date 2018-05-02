@@ -10,9 +10,42 @@ public class Kata {
 //		checkIfFlush(cards);
 //		rps("rock", "paper");
 //		hexToDec("10");
-		
+		dashatize(1);
 	}
 	
+	/* the stupid codewars says this is wrong, but doesn't say why.
+	 * the instructions say make it return with dashes around odd numbers,
+	 * unless they're at position 0 or length()-1.
+	 * mine does that, but codewars says it's wrong.
+	 * if it's not in the instructions, i don't know how to fix it.
+	*/
+	public static String dashatize(int num) {
+		Integer numOne = Integer.valueOf(num);
+		String dashatized = numOne.toString();
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < dashatized.length(); i++) {
+			if (dashatized.charAt(i) % 2 == 1) {
+				sb.append("-" + dashatized.charAt(i) + "-");
+			} else {
+				sb.append(dashatized.charAt(i));
+			}
+		}
+		for (int i = 0; i < sb.length()-1; i++) {
+			if(sb.charAt(0) == '-') {
+				sb.deleteCharAt(0);
+			}
+			if (sb.charAt(sb.length() - 1) == '-') {
+				sb.deleteCharAt(sb.length() - 1);
+			}
+			if(sb.charAt(i) == '-' && sb.charAt(i + 1) == '-') {
+				sb.deleteCharAt(i);
+			}
+		}
+		dashatized = sb.toString();
+		System.out.println(dashatized);
+		return dashatized;
+		
+	}
 	
 	static int hexToDec(final String hexString) {
 		int returned = Integer.parseInt(hexString, 16);
@@ -74,5 +107,6 @@ public class Kata {
 
 		return anagram;
 	}
+	
 		
 }
