@@ -10,8 +10,10 @@ public class Kata {
 //		checkIfFlush(cards);
 //		rps("rock", "paper");
 //		hexToDec("10");
-		dashatize(1);
+//		dashatize(1);
 	}
+	
+	
 	
 	/* the stupid codewars says this is wrong, but doesn't say why.
 	 * the instructions say make it return with dashes around odd numbers,
