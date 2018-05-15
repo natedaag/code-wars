@@ -11,10 +11,11 @@ public class Kata {
 //		rps("rock", "paper");
 //		hexToDec("10");
 //		dashatize(1);
+//		squareUp(2) => [0, 1, 2, 1];
 	}
-	
-	
-	
+
+
+
 	/* the stupid codewars says this is wrong, but doesn't say why.
 	 * the instructions say make it return with dashes around odd numbers,
 	 * unless they're at position 0 or length()-1.
